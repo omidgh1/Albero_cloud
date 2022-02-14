@@ -13,10 +13,10 @@ import plotly.express as px
 # In[2]:
 
 
-app_time = pd.read_csv('C:/Users/omidg/Downloads/app_time_50.csv',index_col=False)
-device_time = pd.read_csv('C:/Users/omidg/Downloads/device_time_50.csv',index_col=False)
-device_fix = pd.read_csv('C:/Users/omidg/Downloads/device_fix_50.csv',index_col=False)
-users = pd.read_csv('C:/Users/omidg/Downloads/users_50.csv',index_col=False)
+app_time = pd.read_csv('app_time_50.csv',index_col=False)
+device_time = pd.read_csv('device_time_50.csv',index_col=False)
+device_fix = pd.read_csv('device_fix_50.csv',index_col=False)
+users = pd.read_csv('users_50.csv',index_col=False)
 del app_time['Unnamed: 0']
 del device_time['Unnamed: 0']
 del device_fix['Unnamed: 0']
