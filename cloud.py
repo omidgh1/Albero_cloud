@@ -44,6 +44,7 @@ def info(x):
     st.text(email)
     st.text(address)
     device_fix_selected_table = device_fix[device_fix['User_ID'] == user_selected_ID]
+    st.title('Device Fixed data')
     device_fix_selected_table[device_fix_selected_table.columns[1:]]
     return device_fix_selected_table
 
@@ -75,11 +76,13 @@ devices_id = device_fix_selected_table['Device_ID'].values
 Device_ID = st.sidebar.selectbox('Please choose the Device ID?',devices_id)
 a = device_time.loc[device_time['Device_ID']==Device_ID][['Date','Voc','Temp','Humidity']]
 
+st.title('Device Live data')
+device_time[device_time['Device_ID']==Device_ID][-10:]
 
 # In[73]:
 
-
-fig = px.line(a, x='Date', y=["Voc",'Temp','Humidity'],title="Statistic")
+st.title('Statistics')
+fig = px.line(a, x='Date', y=["Voc",'Temp','Humidity'])
 st.plotly_chart(fig)
 
 
