@@ -84,6 +84,6 @@ st.plotly_chart(fig)
 
 device_time[device_time['Device_ID']==Device_ID][-10:]
 
-
-
+st.text('Errors')
+device_time[device_time['Device_ID']==Device_ID][['Date','ErrorFlags']][-10:]
 
