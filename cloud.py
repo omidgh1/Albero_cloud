@@ -79,11 +79,10 @@ a = device_time.loc[device_time['Device_ID']==Device_ID][['Date','Voc','Temp','H
 # In[73]:
 
 
-fig = px.line(a, x='Date', y=["Voc",'Temp','Humidity'])
+fig = px.line(a, x='Date', y=["Voc",'Temp','Humidity'],title="Statistic")
 st.plotly_chart(fig)
 
-device_time[device_time['Device_ID']==Device_ID][-10:]
 
-st.text('Errors')
+st.title('Errors')
 device_time[device_time['Device_ID']==Device_ID][['Date','ErrorFlags']][-10:]
 
