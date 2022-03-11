@@ -82,8 +82,7 @@ a = device_time.loc[device_time['Device_ID']==Device_ID][['Date','Voc','Temp','H
 fig = px.line(a, x='Date', y=["Voc",'Temp','Humidity'])
 st.plotly_chart(fig)
 
-
-# In[ ]:
+device_time[device_time['Device_ID']==Device_ID][-10:]
 
 
 
